@@ -25,16 +25,16 @@ public abstract class LongLadder {
 			info.cancel();
 		}
 		Direction laddir = null;
-		if (SideShapeType.FULL.matches(state, world, pos, Direction.EAST))
+		if (state.isSideSolidFullSquare(world, pos, Direction.EAST))
 			laddir=Direction.EAST;
-		if (SideShapeType.FULL.matches(state, world, pos, Direction.SOUTH))
+		if (state.isSideSolidFullSquare(world, pos, Direction.SOUTH))
 			laddir=Direction.SOUTH;
-		if (SideShapeType.FULL.matches(state, world, pos, Direction.WEST))
+		if (state.isSideSolidFullSquare(world, pos, Direction.WEST))
 			laddir=Direction.WEST;
-		if (SideShapeType.FULL.matches(state, world, pos, Direction.NORTH))
+		if (state.isSideSolidFullSquare(world, pos, Direction.NORTH))
 			laddir=Direction.NORTH;
 		if (laddir !=null){
-			if(SideShapeType.FULL.matches(world.getBlockState(pos.down()), world, pos.down(), laddir)) {
+			if(world.getBlockState(pos.down()).isSideSolidFullSquare(world, pos.down(), laddir)) {
 				info.setReturnValue(true);
 				info.cancel();
 			}else if(world.getBlockState(pos.offset(laddir)).isOf(Blocks.LADDER)){
