@@ -1,19 +1,14 @@
 package sf.ssf.sfort.mixin;
 
 import net.minecraft.block.*;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.RayTraceContext;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
 @Mixin(LadderBlock.class)
 public abstract class LongLadder {
 	//TODO this level of 'if' makes me kinda sick
