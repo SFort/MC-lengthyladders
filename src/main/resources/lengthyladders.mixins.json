@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "sf.ssf.sfort.lengthyladders.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "lengthyladders.refmap.json",
+  "mixins": [
+    "LongLadder"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
