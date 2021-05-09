@@ -18,6 +18,7 @@ public class Config implements IMixinConfigPlugin {
     public static Logger LOGGER = LogManager.getLogger();
 
     public static boolean LadderScaff = true;
+    //public static final boolean fapiLoaded = FabricLoader.getInstance().getAllMods().stream().anyMatch(a->return a.getMetadata().getId().equals("fabric-api-base"));
 
     @Override
     public void onLoad(String mixinPackage) {

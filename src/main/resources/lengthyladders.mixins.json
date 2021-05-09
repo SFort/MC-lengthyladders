@@ -5,10 +5,10 @@
   "compatibilityLevel": "JAVA_8",
   "plugin": "tf.ssf.sfort.mixin.Config",
   "mixins": [
-    "LongLadder",
-    "MixinItems"
+    "LongLadder"
   ],
   "client": [
+    "MixinItems"
   ],
   "injectors": {
     "defaultRequire": 1
