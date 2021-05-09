@@ -1,8 +1,9 @@
 {
   "required": true,
-  "package": "sf.ssf.sfort.lengthyladders.mixin",
+  "package": "tf.ssf.sfort.lengthyladders.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "lengthyladders.refmap.json",
+  "plugin": "tf.ssf.sfort.lengthyladders.mixin.Config",
   "mixins": [
     "LongLadder"
   ],

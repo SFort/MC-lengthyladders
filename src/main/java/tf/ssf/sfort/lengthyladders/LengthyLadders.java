@@ -1,4 +1,4 @@
-package sf.ssf.sfort.lengthyladders;
+package tf.ssf.sfort.lengthyladders;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
