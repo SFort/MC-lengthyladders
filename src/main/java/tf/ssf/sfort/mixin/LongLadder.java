@@ -1,4 +1,4 @@
-package sf.ssf.sfort.mixin;
+package tf.ssf.sfort.mixin;
 
 import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;
