@@ -1,4 +1,4 @@
-package tf.ssf.sfort.mixin;
+package tf.ssf.sfort.lengthyladders.mixin;
 
 import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;

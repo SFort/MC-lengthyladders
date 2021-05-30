@@ -1,4 +1,4 @@
-package tf.ssf.sfort.mixin;
+package tf.ssf.sfort.lengthyladders.mixin;
 
 import net.fabricmc.loader.api.FabricLoader;
 import org.apache.logging.log4j.Level;
@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Set;
 
 public class Config implements IMixinConfigPlugin {
+    private static final String mod = "tf.ssf.sfort.lengthyladders";
     public static Logger LOGGER = LogManager.getLogger();
 
     public static boolean LadderScaff = true;
@@ -43,20 +44,18 @@ public class Config implements IMixinConfigPlugin {
 
             if (hash != Arrays.hashCode(ls))
                 Files.write(confFile.toPath(), Arrays.asList(ls));
-            LOGGER.log(Level.INFO,"tf.ssf.sfort.lengthyladders successfully loaded config file");
+            LOGGER.log(Level.INFO,mod+" successfully loaded config file");
         } catch(Exception e) {
-            LOGGER.log(Level.ERROR,"tf.ssf.sfort.lengthyladders failed to load config file, using defaults\n"+e);
+            LOGGER.log(Level.ERROR,mod+" failed to load config file, using defaults\n"+e);
         }
     }
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         switch (mixinClassName){
-            case "tf.ssf.sfort.mixin.LongLadder":
-                return true;
-            case "tf.ssf.sfort.mixin.MixinItems":
+            case mod+".mixin.MixinItems":
                 return LadderScaff;
             default:
-                return false;
+                return true;
         }
     }
     @Override public String getRefMapperConfig() { return null; }

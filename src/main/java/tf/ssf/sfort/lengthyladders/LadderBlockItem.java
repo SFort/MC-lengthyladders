@@ -1,4 +1,4 @@
-package tf.ssf.sfort;
+package tf.ssf.sfort.lengthyladders;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
